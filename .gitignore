@@ -1,0 +1,28 @@
+.DS_Store
+.history
+.buildpath
+.sass-cache
+!.gitignore # except for .gitignore
+*.css.map
+.project
+docs/swagger.yaml
+logs/system.log
+logs/error_log
+tmp/*
+_docker/logs/
+_docker/opt/
+_docker/*.crt
+_docker/*.key
+.idea
+.vscode/
+vendor/
+test/*
+
+
+
+# frontend
+assets/js/**/*.map
+node_modules/
+
+# Unit tests
+tests/unit/coverage/

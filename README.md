@@ -1,8 +1,6 @@
 # electron-deputy
 
-This is a minimal Electron application based for Deputy.
-
-You can learn more about each of these components within the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start).
+This is a minimal Electron based application for Deputy.
 
 ## To Use
 

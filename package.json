@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
-    "dist:win": "electron-builder -w",
+    "dist:win": "electron-builder -w --x64 --ia32",
     "dist:linux": "electron-builder -l"
   },
   "author": "xinyo",
@@ -31,7 +31,7 @@
           "artifactName": "${productName}-win-${version}_portable.${ext}"
         },
         {
-          "target": "msi",
+          "target": "nsis",
           "artifactName": "${productName}-win-${version}.${ext}"
         }
       ],

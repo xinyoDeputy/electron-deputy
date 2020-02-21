@@ -7,7 +7,9 @@
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "dist:win": "electron-builder -w",
+    "dist:linux": "electron-builder -l"
   },
   "author": "xinyo",
   "license": "ISC",
@@ -16,9 +18,27 @@
     "electron-builder": "^22.3.2"
   },
   "build": {
-    "appId": "deputy",
+    "productName": "Deputy Desktop",
+    "appId": "scripter.DeputyDesktop",
     "mac": {
-      "category": "tool"
+      "category": "tool",
+      "artifactName": "${productName}-mac-${version}.${ext}"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "artifactName": "${productName}-win-${version}_portable.${ext}"
+        },
+        {
+          "target": "msi",
+          "artifactName": "${productName}-win-${version}.${ext}"
+        }
+      ],
+    },
+    "linux": {
+      "target": "zip",
+      "artifactName": "${productName}-linux-${version}.${ext}"
     }
   }
 }

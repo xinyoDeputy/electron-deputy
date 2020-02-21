@@ -16,6 +16,7 @@ _docker/*.key
 .idea
 .vscode/
 vendor/
+dist/
 test/*
 
 
